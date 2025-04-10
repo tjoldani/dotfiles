@@ -1,7 +1,0 @@
-[
-    Home,
-    Documents,
-    Downloads,
-    Path("/mnt/das"),
-    Path("/mnt/ha"),
-]
