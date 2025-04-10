@@ -1,0 +1,94 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["custom/nowplaying"],
+  "modules-right": ["temperature", "cpu", "memory", "pulseaudio", "bluetooth", "network", "clock", "custom/power"],
+
+  "hyprland/window": {
+    "max-length": 50,
+    "separate-outputs": true
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true,
+    "active-only": false,
+    "all-outputs": false,
+    "disable-scroll": false,
+    "persistent_workspaces": {
+      "1": [], "2": [], "3": [], "4": [], "5": [],
+      "6": [], "7": [], "8": [], "9": [], "10": []
+    }
+  },
+
+  "custom/nowplaying": {
+    "exec": "~/.config/waybar/scripts/nowplaying.sh",
+    "interval": 5,
+    "return-type": "text",
+    "format": "{}",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+  },
+
+  "custom/power": {
+    "format": "  ",
+    "tooltip": "Power Menu",
+    "on-click": "~/.config/waybar/scripts/power.sh",
+    "interval": 3600
+  },
+
+  "clock": {
+    "format": "{:%I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%A %B %e, %Y}"
+  },
+
+  "cpu": {
+    "format": "  {usage}%"
+  },
+
+  "memory": {
+    "format": "󰍛 {percentage}%",
+    "interval": 30
+  },
+
+  "temperature": {
+    "critical-threshold": 90,
+    "format": "{icon} {temperatureC}°C ",
+    "tooltip-format": "{temperatureF}°F",
+    "format-icons": [""]
+  },
+
+  "network": {
+    "interface": "wlo1",
+    "format-wifi": " ",
+    "format-ethernet": "  {ipaddr}",
+    "format-disconnected": "睊 Disconnected",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}\n{ipaddr}",
+    "on-click": "~/.config/waybar/scripts/wifi.sh"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "  muted",
+    "format-icons": {
+      "default": [" ", " ", " "]
+    },
+    "scroll-step": 10,
+    "on-click": "pavucontrol"
+  },
+
+  "bluetooth": {
+  // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+  "format": "{icon}",
+  "format-icons": "  ",
+  "tooltip-format": "{controller_alias}\t{controller_address}",
+  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+  "on-click": "blueman-manager"
+  }
+}
+

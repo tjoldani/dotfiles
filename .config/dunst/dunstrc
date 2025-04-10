@@ -1,0 +1,22 @@
+[global]
+font = Inter 13
+padding = 16
+horizontal_padding = 16
+corner_radius = 10
+corners = all
+
+[urgency_low]
+background = "#1a1b26cc"
+foreground = "#a9b1d6"
+frame_color = "#bb9af7"
+
+[urgency_normal]
+background = "#1a1b26cc"
+foreground = "#a9b1d6"
+frame_color = "#bb9af7"
+
+[urgency_critical]
+background = "#1a1b26cc"
+foreground = "#a9b1d6"
+frame_color = "#f7768e"
+

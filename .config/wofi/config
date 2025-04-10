@@ -1,0 +1,14 @@
+show=drun
+width=450
+height=300
+always_parse_args=true
+show_all=false
+insensitive=true
+allow_images=false
+normal_window=true
+allow_markup=true
+prompt=
+term=ghostty
+sort_order=default
+key_up=Ctrl-k
+key_down=Ctrl-j

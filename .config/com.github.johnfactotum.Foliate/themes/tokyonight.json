@@ -1,0 +1,13 @@
+{
+  "label": "Tokyonight",
+  "light": {
+    "fg": "#a9b1d6",
+    "bg": "#1a1b26",
+    "link": "#2ac3de"
+  },
+  "dark": {
+    "fg": "#c0caf5",
+    "bg": "#16161e",
+    "link": "#9ece6a"
+  }
+}

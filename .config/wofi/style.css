@@ -1,0 +1,50 @@
+* {
+  /* Default foreground and background colors */
+  color: #c0caf5;
+  background-color: #1a1b26;
+
+  /* Font settings */
+  font-family: "Inter";
+  font-size: 11pt;
+}
+
+/* Selected entry */
+#entry:selected {
+  color: #c0caf5;
+}
+
+#text:selected {
+  background-color: rgb(0, 0, 0, 0);
+}
+
+/* Window settings */
+window {
+  border-radius: 1rem;
+}
+
+/* Input field */
+#input {
+  border: 1px solid #7aa2f7;
+  margin: 15px 10px 0 10px;
+  border-radius: 1rem;
+}
+
+/* Outer box */
+#outer-box {
+  margin: 5px;
+}
+
+/* Inner box */
+#inner-box {
+  margin: 5px;
+}
+
+/* Scrollbar */
+#scroll {
+  margin: 0px;
+}
+
+/* Text entry */
+#text {
+  margin: 5px;
+}

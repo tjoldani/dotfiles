@@ -1,0 +1,39 @@
+{
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+        description: Some("Obsidian"),
+    ): Spawn("obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+    ): System(Terminal),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Home",
+    ): System(Screenshot),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "e",
+    ): System(HomeFolder),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "m",
+    ): Minimize,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Maximize,
+}
