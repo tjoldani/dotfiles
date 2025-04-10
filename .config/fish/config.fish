@@ -12,7 +12,7 @@ abbr -a vc nvim ~/.config/fish/config.fish
 
 set -gx EDITOR /usr/bin/nvim
 set -gx BROWSER /usr/bin/librewolf
-set -Ux TERMINAL /usr/bin/ghostty
+set -Ux TERMINAL /usr/bin/kitty
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 

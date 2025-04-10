@@ -9,7 +9,7 @@ SETUVAR --export GDK_BACKEND:wayland
 SETUVAR --export GTK_USE_PORTAL:1
 SETUVAR --export --path PATH:/home/tj/\x2enpm\x2dglobal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
 SETUVAR --export QT_QPA_PLATFORM:wayland
-SETUVAR --export TERMINAL:/usr/bin/ghostty
+SETUVAR --export TERMINAL:/usr/bin/kitty
 SETUVAR --export XDG_SESSION_TYPE:wayland
 SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:969896
