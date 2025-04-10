@@ -12,15 +12,13 @@ abbr -a vc nvim ~/.config/fish/config.fish
 
 set -gx EDITOR /usr/bin/nvim
 set -gx BROWSER /usr/bin/librewolf
-set -Ux TERMINAL /usr/bin/kitty
+set -gx TERMINAL /usr/bin/kitty
 
 set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 
-set -Ux ELECTRON_ENABLE_FEATURES WaylandWindowDecorations
-set -Ux ELECTRON_OZONE_PLATFORM wayland
 set -Ux ELECTRON_USE_WAYLAND 1
-set -Ux GDK_BACKEND wayland
-set -Ux QT_QPA_PLATFORM wayland
+set -Ux ELECTRON_OZONE_PLATFORM wayland
+set -Ux ELECTRON_ENABLE_FEATURES WaylandWindowDecorations
 set -Ux ELECTRON_DISABLE_GPU 1
 
 fzf --fish | source
