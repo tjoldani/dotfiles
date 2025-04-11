@@ -13,7 +13,7 @@ return {
         enabled = true,
         sections = {
           { section = "header" },
-          { section = "keys", gap = 1, indent = 2, padding = 1 },
+          { section = "keys", indent = 2, padding = 1 },
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
           { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
           { section = "startup" },
@@ -33,7 +33,7 @@ return {
       picker = { enabled = true },
       quickfile = { enabled = true },
       scope = { enabled = true },
-      scroll = { enabled = true },
+      scroll = { enabled = false },
       statuscolumn = { enabled = true },
       words = { enabled = true },
       styles = {
@@ -71,6 +71,14 @@ return {
           Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
         end,
         desc = "Find Config File",
+      },
+      {
+        "<leader>fo",
+        function()
+          local path = vim.fn.expand("~/Obsidian/Home")
+          require("snacks").picker.files({ cwd = path })
+        end,
+        desc = "Find Obsidian File",
       },
     },
   },
