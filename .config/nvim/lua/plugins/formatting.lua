@@ -15,12 +15,23 @@ return {
         json = { "prettier" },
         html = { "prettier" },
         yaml = { "prettier" },
-        markdown = { "prettier" },
+        markdown = { "markdownlint" },
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
         python = { "ruff_format" },
       },
+
+      formatters = {
+        markdownlint = {
+          command = vim.fn.stdpath("data") .. "/mason/bin/markdownlint",
+          args = function(params)
+            return { "--fix", vim.fn.fnameescape(params.filename) }
+          end,
+          stdin = false,
+        },
+      },
+
       format_on_save = {
         lsp_fallback = true,
         timeout_ms = 1000,
