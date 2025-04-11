@@ -1,4 +1,5 @@
 require("config.lazy")
+require("config.lsp")
 require("config.core")
 require("config.keymaps").setup()
 require("config.autocmd").setup()

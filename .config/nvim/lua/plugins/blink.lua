@@ -17,9 +17,9 @@ return {
     appearance = {
       nerd_font_variant = "mono", -- 'mono' for 'Nerd Font Mono', 'normal' for 'Nerd Font'
     },
-    completion = { documentation = { auto_show = false } },
+    completion = { documentation = { auto_show = true } },
     sources = {
-      default = { "lsp", "path", "snippets", "buffer" },
+      default = { "lsp", "path", "snippets" },
     },
     fuzzy = { implementation = "prefer_rust_with_warning" },
   },
