@@ -15,7 +15,6 @@ return {
     "pyrightconfig.json",
     ".git",
   },
-  -- https://microsoft.github.io/pyright/#/settings?id=pyright-settings
   settings = {
     pyright = {
       strict = true,
@@ -28,6 +27,5 @@ return {
       },
     },
   },
-
   single_file_support = true,
 }

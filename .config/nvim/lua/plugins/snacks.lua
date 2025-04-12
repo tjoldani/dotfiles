@@ -11,11 +11,23 @@ return {
       bigfile = { enabled = true },
       dashboard = {
         enabled = true,
+        preset = {
+          pick = nil,
+          keys = {
+            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+            { icon = " ", key = "f", desc = "Smart Search", action = ":lua Snacks.dashboard.pick('smart')" },
+            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
+            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+            { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy", enabled = package.loaded.lazy ~= nil },
+            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          },
+        },
         sections = {
           { section = "header" },
-          { section = "keys", indent = 2, padding = 1 },
-          { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
-          { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+          { section = "keys", padding = 2 },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 0, padding = 2, limit = 10 },
+          { icon = " ", title = "Projects", section = "projects", indent = 0, padding = 2 },
           { section = "startup" },
         },
       },
@@ -28,9 +40,25 @@ return {
       image = { enabled = true },
       notifier = {
         enabled = true,
-        timeout = 5000,
+        timeout = 4000,
       },
-      picker = { enabled = true },
+      picker = {
+        enabled = true,
+        matcher = {
+          frecency = true,
+        },
+        win = {
+          input = {
+            keys = {
+              -- Close picker with ESC instead of going to normal mode
+              ["<ESC>"] = { "close", mode = { "n", "i" } },
+              -- Scroll the preview window
+              ["J"] = { "preview_scroll_down", mode = { "i", "n" } },
+              ["K"] = { "preview_scroll_up", mode = { "i", "n" } },
+            },
+          },
+        },
+      },
       quickfile = { enabled = true },
       scope = { enabled = true },
       scroll = { enabled = false },
@@ -52,14 +80,37 @@ return {
         desc = "File Explorer",
       },
       {
+        "<leader>fb",
+        function()
+          Snacks.picker.buffers({
+            current = true,
+            sort_lastused = true,
+            win = {
+              input = {
+                keys = { ["x"] = "bufdelete" },
+              },
+              list = { keys = { ["x"] = "bufdelete" } },
+            },
+          })
+        end,
+        desc = "Buffers",
+      },
+      {
         "<leader>ff",
         function()
           Snacks.picker.smart()
         end,
-        desc = "Smart Find Files",
+        desc = "Smart",
       },
       {
-        "<leader>fw",
+        "<leader>fr",
+        function()
+          Snacks.picker.recent()
+        end,
+        desc = "Recent",
+      },
+      {
+        "<leader>fg",
         function()
           Snacks.picker.grep()
         end,
@@ -70,7 +121,7 @@ return {
         function()
           Snacks.picker.files({ cwd = vim.fn.stdpath("config") })
         end,
-        desc = "Find Config File",
+        desc = "Configs",
       },
       {
         "<leader>fo",
@@ -78,7 +129,21 @@ return {
           local path = vim.fn.expand("~/Obsidian/Home")
           require("snacks").picker.files({ cwd = path })
         end,
-        desc = "Find Obsidian File",
+        desc = "Obsidian",
+      },
+      {
+        "<leader>z",
+        function()
+          Snacks.zen()
+        end,
+        desc = "Toggle Zen Mode",
+      },
+      {
+        "<c-/>",
+        function()
+          Snacks.terminal()
+        end,
+        desc = "Terminal",
       },
     },
   },

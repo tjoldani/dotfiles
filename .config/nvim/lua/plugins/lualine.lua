@@ -13,7 +13,7 @@ return {
       sections = {
         lualine_z = {
           function()
-            return os.date("%I:%M %p") -- 12-hour format with AM/PM
+            return os.date("%I:%M %p")
           end,
         },
       },

@@ -16,11 +16,6 @@ return {
       markdown = { "markdownlint" },
     }
 
-    -- Optional config file
-    -- lint.linters.markdownlint.args = {
-    --   "--config", vim.fn.expand("~/.markdownlint.yaml"),
-    -- }
-
     local lint_augroup = vim.api.nvim_create_augroup("Linting", { clear = true })
 
     vim.api.nvim_create_autocmd({ "BufWritePost", "InsertLeave", "BufEnter" }, {
