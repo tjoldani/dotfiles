@@ -3,9 +3,6 @@ return {
     "folke/snacks.nvim",
     priority = 1000,
     lazy = false,
-    ---@type snacks.Config
-    ---@class snacks.explorer.Config
-    ---@class snacks.image.Config
 
     opts = {
       bigfile = { enabled = true },
@@ -26,8 +23,8 @@ return {
         sections = {
           { section = "header" },
           { section = "keys", padding = 2 },
-          { icon = " ", title = "Recent Files", section = "recent_files", indent = 0, padding = 2, limit = 10 },
-          { icon = " ", title = "Projects", section = "projects", indent = 0, padding = 2 },
+          { icon = " ", title = "Recent Files", section = "recent_files", indent = 0, padding = 2, limit = 5 },
+          { icon = " ", title = "Projects", section = "projects", indent = 0, padding = 2, dirs = { "/home/tj/Obsidian/Home/", "/mnt/ha/", "/home/tj/.config/hypr/" } },
           { section = "startup" },
         },
       },
