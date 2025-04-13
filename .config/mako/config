@@ -1,0 +1,23 @@
+background-color=#1a1b26
+text-color=#c0caf5
+border-color=#7aa2f7
+border-size=2
+border-radius=14
+padding=12
+margin=10
+default-timeout=5000
+max-visible=5
+width=300
+height=100
+font= Inter 12
+
+# Optional styling for different urgency levels
+[urgency=low]
+border-color=#7dcfff
+
+[urgency=normal]
+border-color=#7aa2f7
+
+[urgency=high]
+border-color=#f7768e
+
