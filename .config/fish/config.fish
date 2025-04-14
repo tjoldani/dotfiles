@@ -1,11 +1,17 @@
 set fish_greeting
 
-alias v="nvim ."
+alias v="nvim"
+alias vv="nvim ."
+alias vh="nvim ~/.config/hypr/"
+alias vn="nvim ~/.config/nvim/"
+alias vf="nvim ~/.config/fish"
+alias vha="nvim /mnt/ha"
+
 alias l="ls --color"
 alias ll="ls -la --color"
-alias n="nnn -deH"
 alias py="python3"
 alias gp="git add . && git commit -m "update" && git push"
+
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 abbr -a vc nvim ~/.config/fish/config.fish
