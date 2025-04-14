@@ -133,7 +133,7 @@ return {
         function()
           Snacks.zen()
         end,
-        desc = "Toggle Zen Mode",
+        desc = "Toggle Zen",
       },
       {
         "<c-/>",

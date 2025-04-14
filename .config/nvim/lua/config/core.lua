@@ -14,13 +14,13 @@ vim.opt.swapfile = false -- Annoying
 vim.opt.cursorline = true -- Highlight current line
 vim.opt.ttyfast = true -- Faster scrolling
 vim.opt.smoothscroll = true -- Like butter
-vim.opt.scrolloff = 999 -- Keep cursur in middle when scrolling
+vim.opt.scrolloff = 0 -- Keep cursur in middle when scrolling - 0 to disable
 vim.opt.mouse = "a" -- Enable mouse
 vim.opt.history = 100 -- Command line history
 vim.opt.splitkeep = "screen" -- Stabalize window open/close
 vim.opt.splitbelow = true -- Open help split below current instead of above
 vim.opt.splitright = true -- Open splits to right by default
-vim.opt.colorcolumn = "90" -- Add a column guide
+-- vim.opt.colorcolumn = "90" -- Add a column guide
 vim.opt.virtualedit = "block" -- Visual select can move beyond characters
 
 -- Indentation
