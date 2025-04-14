@@ -4,6 +4,14 @@ return {
   config = function()
     local lint = require("lint")
 
+    local markdownlint = require("lint").linters.markdownlint
+    markdownlint.args = {
+      "--disable",
+      "MD013",
+      "MD007",
+      "--",
+    }
+
     lint.linters_by_ft = {
       javascript = { "eslint_d" },
       typescript = { "eslint_d" },
