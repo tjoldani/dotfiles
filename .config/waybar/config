@@ -15,9 +15,6 @@
     "on-click": "activate",
     "all-outputs": false,
     "disable-scroll": false,
-    "persistent-workspaces": {
-      "*": 3
-    }
   },
 
   "custom/nowplaying": {
