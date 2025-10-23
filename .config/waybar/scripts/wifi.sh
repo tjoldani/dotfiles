@@ -1,2 +1,2 @@
 #!/bin/bash
-ghostty -e nmtui
+kitty -e nmtui

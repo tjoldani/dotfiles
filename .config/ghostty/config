@@ -1,4 +1,4 @@
-theme = tokyonight_night
+theme = tokyonight
 
 # Window
 window-decoration = false
