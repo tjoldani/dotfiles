@@ -205,9 +205,38 @@ These scripts are part of the daily workflow - be careful when modifying them.
 
 ## Project Locations
 
+### Local Projects
 - `~/Projects/` - General development projects (currently empty)
 - `~/Downloads/HA/` - Home Assistant related project (git repo)
 - `~/Documents/Home/` - Obsidian vault (git-backed)
+
+### Server Projects (mounted at `/mnt/server/`)
+
+**concerts** (`/mnt/server/concerts/`)
+- St. Louis concert discovery and tracking application
+- Python-based web scraper + REST API + static frontend
+- Scrapes 10 local venues, matches with stats.fm listening data
+- Deployed via systemd + Nginx
+- See `/mnt/server/concerts/CLAUDE.md` for details
+
+**mobility-monitor** (`/mnt/server/mobility-monitor/`)
+- Automated mobility industry intelligence system
+- Aggregates 27 RSS feeds, processes with Claude AI
+- Generates daily/weekly markdown reports on transportation trends
+- Scheduled execution with Git-synced output
+- See `/mnt/server/mobility-monitor/CLAUDE.md` for details
+
+**movies** (`/mnt/server/movies/`)
+- St. Louis theater movie aggregator (Hi-Pointe + Arkadin)
+- Python web scraper + REST API + static frontend
+- Mobile-friendly interface with user "starred" movies
+- Deployed via systemd + Nginx (port 8085)
+- See `/mnt/server/movies/CLAUDE.md` for details
+
+**docker** (`/mnt/server/docker/`)
+- Docker compose media server stack
+- Services: Jellyfin, Radarr, Lidarr, Bazarr, Prowlarr, etc.
+- Infrastructure management (not active development)
 
 ## Best Practices When Assisting
 
