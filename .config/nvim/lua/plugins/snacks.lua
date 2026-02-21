@@ -24,7 +24,7 @@ return {
           { section = "header" },
           { section = "keys", padding = 2 },
           { icon = " ", title = "Recent Files", section = "recent_files", indent = 0, padding = 2, limit = 5 },
-          { icon = " ", title = "Projects", section = "projects", indent = 0, padding = 2, dirs = { "/home/tj/Obsidian/Home/", "/mnt/ha/", "/home/tj/.config/hypr/" } },
+          { icon = " ", title = "Projects", section = "projects", indent = 0, padding = 2, session = false, dirs = { "/home/tj/Documents/Home/", "/mnt/ha/", "/home/tj/.config/hypr/" } },
           { section = "startup" },
         },
       },

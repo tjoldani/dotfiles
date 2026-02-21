@@ -6,7 +6,7 @@ return {
 
     lualine.setup({
       options = {
-        theme = auto,
+        theme = "auto",
         section_separators = "",
         component_separators = "",
       },

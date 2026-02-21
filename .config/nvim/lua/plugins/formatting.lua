@@ -9,7 +9,7 @@ return {
         css = { "prettier" },
         html = { "prettier" },
         yaml = { "prettier" },
-        markdown = { "markdownlint", "prettier" },
+        markdown = { "markdownlint-cli2", "prettier" },
         lua = { "stylua" },
         python = { "ruff_format" },
       },

@@ -60,7 +60,7 @@
     "interface": "wlo1",
     "format-wifi": " ",
     "format-ethernet": "  {ipaddr}",
-    "format-disconnected": "睊 Disconnected",
+    "format-disconnected": "󰤭 Disconnected",
     "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}\n{ipaddr}",
     "on-click": "~/.config/waybar/scripts/wifi.sh"
   },

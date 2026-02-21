@@ -4,14 +4,6 @@ return {
   config = function()
     local lint = require("lint")
 
-    local markdownlint = require("lint").linters.markdownlint
-    markdownlint.args = {
-      "--disable",
-      "MD013",
-      "MD007",
-      "--",
-    }
-
     lint.linters_by_ft = {
       javascript = { "eslint_d" },
       typescript = { "eslint_d" },
@@ -21,7 +13,7 @@ return {
       python = { "ruff" },
       html = { "htmlhint" },
       yaml = { "yamllint" },
-      markdown = { "markdownlint" },
+      markdown = { "markdownlint-cli2" },
     }
 
     local lint_augroup = vim.api.nvim_create_augroup("Linting", { clear = true })
