@@ -7,7 +7,7 @@
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0);
-  color: #c0caf5;
+  color: #D9D9D9;
 }
 
 #clock,
@@ -33,7 +33,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-  background-color: rgba(122, 162, 247, 0.3);
+  background-color: rgba(164, 137, 249, 0.3);
   border-radius: 100%;
   min-width: 28px;
   min-height: 28px;

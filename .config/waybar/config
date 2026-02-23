@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/nowplaying"],
+  "modules-center": [],
   "modules-right": ["temperature", "cpu", "memory", "pulseaudio", "bluetooth", "network", "clock", "custom/power"],
 
   "hyprland/window": {
@@ -15,16 +15,6 @@
     "on-click": "activate",
     "all-outputs": false,
     "disable-scroll": false,
-  },
-
-  "custom/nowplaying": {
-    "exec": "~/.config/waybar/scripts/nowplaying.sh",
-    "interval": 5,
-    "return-type": "text",
-    "format": "{}",
-    "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
   },
 
   "custom/power": {

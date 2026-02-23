@@ -240,14 +240,15 @@ These scripts are part of the daily workflow - be careful when modifying them.
 
 ## Best Practices When Assisting
 
-1. **Read before editing**: Always read config files before suggesting changes
-2. **Ask before modifying**: Especially for Hyprland, Neovim, and shell configs
-3. **Test suggestions**: Ensure config syntax is valid (especially for Lua, Fish, Hyprland)
-4. **Follow existing patterns**: Match the user's existing config style and structure
-5. **Preserve theme consistency**: Maintain Tokyo Night theme when adding new tools
-6. **Respect dotfiles workflow**: Remember configs are version-controlled
-7. **Use existing tools**: Don't suggest installing new tools when existing ones suffice
-8. **Stay minimal**: Don't over-engineer or add unnecessary complexity
+1. **Use nvim for editing**: Always use Neovim (`nvim`) as the text editor when editing files, not other tools like `nano`, `vi`, or GUI editors
+2. **Read before editing**: Always read config files before suggesting changes
+3. **Ask before modifying**: Especially for Hyprland, Neovim, and shell configs
+4. **Test suggestions**: Ensure config syntax is valid (especially for Lua, Fish, Hyprland)
+5. **Follow existing patterns**: Match the user's existing config style and structure
+6. **Preserve theme consistency**: Maintain Tokyo Night theme when adding new tools
+7. **Respect dotfiles workflow**: Remember configs are version-controlled
+8. **Use existing tools**: Don't suggest installing new tools when existing ones suffice
+9. **Stay minimal**: Don't over-engineer or add unnecessary complexity
 
 ## Common Tasks
 
