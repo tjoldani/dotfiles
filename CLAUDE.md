@@ -3,10 +3,11 @@
 ## Overview
 
 This is the home directory for a highly customized Arch Linux development environment with:
-- **Primary Shell**: Fish (with Bash fallback)
+
+- **Primary Shell**: Bash
 - **Window Manager**: Hyprland (Wayland-native tiling WM)
 - **Primary Editor**: Neovim with extensive LSP/plugin setup
-- **Terminal**: Kitty with Tokyo Night theme
+- **Terminal**: Foot
 - **Dotfiles**: Managed via bare git repository at `~/.dotfiles/`
 - **Knowledge Base**: Obsidian vault at `~/Documents/Home/` using PARA method
 
@@ -25,12 +26,14 @@ When working in this directory, prioritize:
 **IMPORTANT**: Always ask before editing configuration files. This user values stability and wants to review changes before they're applied.
 
 **Extra caution required for**:
+
 - **Hyprland configs** (`~/.config/hypr/`) - These control the entire desktop environment
   - Changes here can break window management, keybindings, or the whole desktop session
   - Test changes carefully and ensure no syntax errors
   - Never remove critical autostart programs (waybar, mako, hypridle, hyprpaper)
 
 **Other critical configs to handle carefully**:
+
 - Neovim plugins/LSP (`~/.config/nvim/`)
 - Shell configs (`~/.config/fish/config.fish`)
 - Custom scripts (`~/.local/bin/`)
@@ -39,18 +42,21 @@ When working in this directory, prioritize:
 ### Dotfiles Repository Workflow
 
 Configuration files are version-controlled via a bare git repository:
+
 - **Repo location**: `~/.dotfiles/` (bare repo)
 - **Remote**: `git@github.com:tjoldani/dotfiles.git`
 - **Managed via alias**: `dotfiles` command (special git alias in Fish)
 - **Tracked directories**: `.config/{fish,ghostty,hypr,kitty,nvim,waybar,wlogout,wofi,tmux,mako}`, `.local/bin/`
 
 **When making config changes**:
+
 1. Ask before editing any configuration file
 2. After editing, ask before committing to dotfiles repo
 3. Use the `dotfiles` alias for git operations, not regular `git`
 4. Alternative: User has `update-git.sh` script for auto-committing dotfiles
 
 **Example dotfiles workflow**:
+
 ```bash
 # Check status
 dotfiles status
@@ -75,12 +81,14 @@ dotfiles push
 ### Languages and Tools
 
 **Installed runtimes**:
+
 - Python 3.14.3 (with IPython)
 - Node.js v25.6.1 (managed via NVM)
 - Go 1.26.0
 - Git 2.53.0
 
 **Package managers**:
+
 - npm (Node.js)
 - pip (Python)
 - nvm (Node version management)
@@ -89,6 +97,7 @@ dotfiles push
 ### Editor Setup
 
 **Neovim** (`~/.config/nvim/`):
+
 - Leader key: `Space`
 - Plugin manager: Lazy.nvim
 - LSP: Mason with auto-install for language servers
@@ -98,6 +107,7 @@ dotfiles push
 - Modular Lua config structure
 
 **Language support in Neovim**:
+
 | Language | LSP | Linter | Formatter |
 |----------|-----|--------|-----------|
 | JavaScript/TypeScript | typescript-language-server | eslint_d | prettier |
@@ -112,18 +122,21 @@ dotfiles push
 ### Terminal and Shell
 
 **Fish Shell** (`~/.config/fish/config.fish`):
+
 - Quick aliases: `v` (nvim), `vv` (nvim .), `py` (python3), `ll` (ls -la)
 - Config edit shortcuts: `vh` (Hyprland), `vn` (Neovim), `vf` (Fish)
 - Git workflow alias: `gp` (add, commit, push in one command)
 - Integration: nvm.fish, fzf, yazi file manager
 
 **Environment variables**:
+
 - `EDITOR`: /usr/bin/nvim
 - `BROWSER`: /usr/bin/librewolf
 - `TERMINAL`: /usr/bin/kitty
 - Wayland-optimized for Electron apps
 
 **Tmux** (`~/.config/tmux/tmux.conf`):
+
 - Prefix: `Ctrl+Space` (not default Ctrl+B)
 - Vim-style navigation: `h/j/k/l` for panes
 - Auto-restore sessions via tmux-resurrect
@@ -134,6 +147,7 @@ dotfiles push
 **Config**: `~/.config/hypr/hyprland.conf`
 
 **Key keybindings** (Super = Windows/Command key):
+
 - `Super+Return`: Terminal (Kitty)
 - `Super+Q`: Kill active window
 - `Super+Space`: Application menu (wofi)
@@ -148,6 +162,7 @@ dotfiles push
 - `Super+Alt+D`: Daily note script
 
 **Special workspaces**:
+
 - Workspace 1: Terminal (auto-start)
 - Workspace 4: Browser (auto-start)
 - special:notes: Obsidian vault
@@ -158,6 +173,7 @@ dotfiles push
 **Location**: `~/Documents/Home/`
 
 **Organization**: PARA method
+
 - `00 Inbox/` - Quick captures and unprocessed notes
 - `01 Daily/` - Daily notes organized by year/month
 - `02 Projects/` - Active project notes
@@ -166,12 +182,14 @@ dotfiles push
 - `05 Archive/` - Completed/inactive items
 
 **Key features**:
+
 - Git integration via Obsidian Git plugin
 - Templater for dynamic templates
 - Vim mode enabled
 - Custom scripts for note creation in `~/.local/bin/`
 
 **Note creation scripts**:
+
 - `dailynote.sh` - Creates daily notes with special prompts for Monday (standup) and Friday (reflection)
 - `newnote.sh` - Creates quick notes in Inbox with timestamp
 
@@ -190,6 +208,7 @@ These scripts are part of the daily workflow - be careful when modifying them.
 ## Theme and Appearance
 
 **Consistent theme**: Tokyo Night across all tools
+
 - Neovim colorscheme
 - Kitty terminal theme
 - Tmux theme
@@ -200,19 +219,21 @@ These scripts are part of the daily workflow - be careful when modifying them.
 ## Git Configuration
 
 - **User**: tjoldani
-- **Email**: 165098448+tjoldani@users.noreply.github.com
+- **Email**: <165098448+tjoldani@users.noreply.github.com>
 - **SSH**: Uses SSH for GitHub authentication
 
 ## Project Locations
 
 ### Local Projects
+
 - `~/Projects/` - General development projects (currently empty)
-- `~/Downloads/HA/` - Home Assistant related project (git repo)
+- `/mnt/ha/` - Home Assistant related project (git repo)
 - `~/Documents/Home/` - Obsidian vault (git-backed)
 
 ### Server Projects (mounted at `/mnt/server/`)
 
 **concerts** (`/mnt/server/concerts/`)
+
 - St. Louis concert discovery and tracking application
 - Python-based web scraper + REST API + static frontend
 - Scrapes 10 local venues, matches with stats.fm listening data
@@ -220,6 +241,7 @@ These scripts are part of the daily workflow - be careful when modifying them.
 - See `/mnt/server/concerts/CLAUDE.md` for details
 
 **mobility-monitor** (`/mnt/server/mobility-monitor/`)
+
 - Automated mobility industry intelligence system
 - Aggregates 27 RSS feeds, processes with Claude AI
 - Generates daily/weekly markdown reports on transportation trends
@@ -227,6 +249,7 @@ These scripts are part of the daily workflow - be careful when modifying them.
 - See `/mnt/server/mobility-monitor/CLAUDE.md` for details
 
 **movies** (`/mnt/server/movies/`)
+
 - St. Louis theater movie aggregator (Hi-Pointe + Arkadin)
 - Python web scraper + REST API + static frontend
 - Mobile-friendly interface with user "starred" movies
@@ -234,6 +257,7 @@ These scripts are part of the daily workflow - be careful when modifying them.
 - See `/mnt/server/movies/CLAUDE.md` for details
 
 **docker** (`/mnt/server/docker/`)
+
 - Docker compose media server stack
 - Services: Jellyfin, Radarr, Lidarr, Bazarr, Prowlarr, etc.
 - Infrastructure management (not active development)
@@ -253,21 +277,25 @@ These scripts are part of the daily workflow - be careful when modifying them.
 ## Common Tasks
 
 ### Editing configs
+
 - Always ask before editing
 - Use Neovim for editing: `nvim ~/.config/path/to/config`
 - Test changes before committing to dotfiles
 
 ### Working with Obsidian
+
 - Refer to `~/Documents/Home/CLAUDE.md` for vault-specific instructions
 - Use existing scripts for note creation
 - Respect PARA organization method
 
 ### Development work
+
 - Use appropriate language servers (already configured)
 - Follow formatter settings (prettier, ruff, stylua)
 - Respect ESLint configuration for JavaScript
 
 ### System configuration
+
 - Extra careful with Hyprland - test before committing
 - Reload configs when possible rather than restarting
 - Check Hyprland docs before adding new features
