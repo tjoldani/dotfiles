@@ -3,13 +3,25 @@
 add_newline = false
 
 format = """
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
 $character"""
 
+[hostname]
+ssh_only = true
+style = "bold #f7768e"
+format = "[@$hostname]($style) "
+
+[username]
+style_user = "bold #7aa2f7"
+format = "[$user]($style)"
+show_always = false
+
 [directory]
-style = "bold #7aa2f7"
+style = "bold #7BCBFC"
 truncation_length = 3
 truncate_to_repo = true
 

@@ -1,9 +1,10 @@
 theme = Midnight In Mojave
+background = #20212A
 
 # Window
 window-decoration = false
 window-theme = dark
-background-opacity = 0.8
+background-opacity = 1.0
 window-padding-x = 10
 window-padding-y = 10
 

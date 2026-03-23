@@ -4,10 +4,10 @@
 
 This is the home directory for a highly customized Arch Linux development environment with:
 
-- **Primary Shell**: Bash
+- **Primary Shell**: Zsh (minimal configuration with Starship prompt)
 - **Window Manager**: Hyprland (Wayland-native tiling WM)
 - **Primary Editor**: Neovim with extensive LSP/plugin setup
-- **Terminal**: Foot
+- **Terminal**: Ghostty
 - **Dotfiles**: Managed via bare git repository at `~/.dotfiles/`
 - **Knowledge Base**: Obsidian vault at `~/Documents/Home/` using PARA method
 
@@ -35,7 +35,7 @@ When working in this directory, prioritize:
 **Other critical configs to handle carefully**:
 
 - Neovim plugins/LSP (`~/.config/nvim/`)
-- Shell configs (`~/.config/fish/config.fish`)
+- Shell configs (`~/.zshrc`, `~/.config/starship.toml`)
 - Custom scripts (`~/.local/bin/`)
 - Tmux configuration (`~/.config/tmux/tmux.conf`)
 
@@ -45,7 +45,7 @@ Configuration files are version-controlled via a bare git repository:
 
 - **Repo location**: `~/.dotfiles/` (bare repo)
 - **Remote**: `git@github.com:tjoldani/dotfiles.git`
-- **Managed via alias**: `dotfiles` command (special git alias in Fish)
+- **Managed via alias**: `dotfiles` command (git wrapper for bare repository)
 - **Tracked directories**: `.config/{fish,ghostty,hypr,kitty,nvim,waybar,wlogout,wofi,tmux,mako}`, `.local/bin/`
 
 **When making config changes**:
@@ -121,12 +121,14 @@ dotfiles push
 
 ### Terminal and Shell
 
-**Fish Shell** (`~/.config/fish/config.fish`):
+**Zsh with Starship** (`~/.zshrc` and `~/.config/starship.toml`):
 
-- Quick aliases: `v` (nvim), `vv` (nvim .), `py` (python3), `ll` (ls -la)
-- Config edit shortcuts: `vh` (Hyprland), `vn` (Neovim), `vf` (Fish)
-- Git workflow alias: `gp` (add, commit, push in one command)
-- Integration: nvm.fish, fzf, yazi file manager
+- Minimal Zsh configuration without Oh My Zsh
+- Starship prompt with Tokyo Night colors
+- Quick aliases: `v` (nvim), `ll` (ls -lah), `vim` (nvim)
+- Git aliases: `gs` (status), `ga` (add), `gc` (commit), `gp` (push), `gl` (pull), `gd` (diff), `gco` (checkout), `gb` (branch), `glog` (log graph)
+- Case-insensitive tab completion with menu
+- Emacs-style key bindings
 
 **Environment variables**:
 
@@ -267,7 +269,7 @@ These scripts are part of the daily workflow - be careful when modifying them.
 1. **Use nvim for editing**: Always use Neovim (`nvim`) as the text editor when editing files, not other tools like `nano`, `vi`, or GUI editors
 2. **Read before editing**: Always read config files before suggesting changes
 3. **Ask before modifying**: Especially for Hyprland, Neovim, and shell configs
-4. **Test suggestions**: Ensure config syntax is valid (especially for Lua, Fish, Hyprland)
+4. **Test suggestions**: Ensure config syntax is valid (especially for Lua, Zsh, Hyprland)
 5. **Follow existing patterns**: Match the user's existing config style and structure
 6. **Preserve theme consistency**: Maintain Tokyo Night theme when adding new tools
 7. **Respect dotfiles workflow**: Remember configs are version-controlled
@@ -309,8 +311,8 @@ hyprctl reload
 # Reload Waybar
 killall waybar && waybar &
 
-# Reload Fish config
-source ~/.config/fish/config.fish
+# Reload Zsh config
+source ~/.zshrc
 
 # Tmux reload
 tmux source ~/.config/tmux/tmux.conf
