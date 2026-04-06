@@ -1,2 +1,2 @@
 #!/bin/bash
-kitty -e nmtui
+kitty --class nmtui -e nmtui

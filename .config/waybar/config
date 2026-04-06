@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": [],
-  "modules-right": ["temperature", "cpu", "memory", "pulseaudio", "bluetooth", "network", "clock", "custom/power"],
+  "modules-right": ["temperature", "cpu", "memory", "pulseaudio", "network", "clock", "custom/power"],
 
   "hyprland/window": {
     "max-length": 50,
@@ -14,14 +14,13 @@
     "format": "{id}",
     "on-click": "activate",
     "all-outputs": false,
-    "disable-scroll": false,
+    "disable-scroll": false
   },
 
   "custom/power": {
     "format": "  ",
     "tooltip": "Power Menu",
-    "on-click": "~/.config/waybar/scripts/power.sh",
-    "interval": 3600
+    "on-click": "~/.config/waybar/scripts/power.sh"
   },
 
   "clock": {
@@ -31,11 +30,14 @@
   },
 
   "cpu": {
-    "format": "  {usage}%"
+    "format": "  {usage}%",
+    "tooltip-format": "{usage0}%",
+    "interval": 5
   },
 
   "memory": {
     "format": "󰍛 {percentage}%",
+    "tooltip-format": "{used:0.1f}G / {total:0.1f}G",
     "interval": 30
   },
 
@@ -61,18 +63,7 @@
     "format-icons": {
       "default": [" ", " ", " "]
     },
-    "scroll-step": 10,
-    "on-click": "pavucontrol"
-  },
-
-  "bluetooth": {
-  // "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
-  "format": "{icon}",
-  "format-icons": "  ",
-  "tooltip-format": "{controller_alias}\t{controller_address}",
-  "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
-  "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-  "on-click": "blueman-manager"
+    "on-click": "hyprpwcenter"
   }
 }
 
