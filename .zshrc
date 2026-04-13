@@ -43,6 +43,7 @@ alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias vim='nvim'
 alias v='nvim'
+alias claudex='claude --dangerously-skip-permissions'
 
 # Git aliases (replacing Oh My Zsh git plugin)
 alias gs='git status'
@@ -54,6 +55,9 @@ alias gd='git diff'
 alias gco='git checkout'
 alias gb='git branch'
 alias glog='git log --oneline --graph --decorate'
+
+# ===== Secrets (API keys, tokens — not tracked in dotfiles) =====
+[ -f ~/.secrets ] && source ~/.secrets
 
 # ===== Initialize Starship Prompt =====
 eval "$(starship init zsh)"

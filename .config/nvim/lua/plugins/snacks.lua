@@ -32,9 +32,9 @@ return {
         enabled = true,
         replace_netrw = true,
       },
-      indent = { enabled = true },
+      indent = { enabled = false },
       input = { enabled = true },
-      image = { enabled = true },
+      image = { enabled = false },
       notifier = {
         enabled = true,
         timeout = 4000,
@@ -57,7 +57,7 @@ return {
         },
       },
       quickfile = { enabled = true },
-      scope = { enabled = true },
+      scope = { enabled = false },
       scroll = { enabled = false },
       statuscolumn = { enabled = true },
       words = { enabled = true },
@@ -123,7 +123,7 @@ return {
       {
         "<leader>fo",
         function()
-          local path = vim.fn.expand("~/Obsidian/Home")
+          local path = vim.fn.expand("~/Documents/Home/")
           require("snacks").picker.files({ cwd = path })
         end,
         desc = "Obsidian",

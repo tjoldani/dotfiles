@@ -7,7 +7,7 @@ This is the home directory for a highly customized Arch Linux development enviro
 - **Primary Shell**: Zsh (minimal configuration with Starship prompt)
 - **Window Manager**: Hyprland (Wayland-native tiling WM)
 - **Primary Editor**: Neovim with extensive LSP/plugin setup
-- **Terminal**: Ghostty
+- **Terminal**: Kitty
 - **Dotfiles**: Managed via bare git repository at `~/.dotfiles/`
 - **Knowledge Base**: Obsidian vault at `~/Documents/Home/` using PARA method
 
@@ -46,7 +46,7 @@ Configuration files are version-controlled via a bare git repository:
 - **Repo location**: `~/.dotfiles/` (bare repo)
 - **Remote**: `git@github.com:tjoldani/dotfiles.git`
 - **Managed via alias**: `dotfiles` command (git wrapper for bare repository)
-- **Tracked directories**: `.config/{fish,ghostty,hypr,kitty,nvim,waybar,wlogout,wofi,tmux,mako}`, `.local/bin/`
+- **Tracked directories**: `.config/{ghostty,hypr,kitty,nvim,waybar,wlogout,wofi,tmux,mako}`, `.local/bin/`
 
 **When making config changes**:
 
@@ -221,14 +221,17 @@ These scripts are part of the daily workflow - be careful when modifying them.
 ## Git Configuration
 
 - **User**: tjoldani
-- **Email**: <165098448+tjoldani@users.noreply.github.com>
+- **Email**: tjoldani@gmail.com
 - **SSH**: Uses SSH for GitHub authentication
 
 ## Project Locations
 
 ### Local Projects
 
-- `~/Projects/` - General development projects (currently empty)
+- `~/Projects/startpage/` - Custom browser homepage (git repo)
+  - Tokyo Night themed static page
+  - Used as default homepage across all devices
+  - Occasionally updated/maintained
 - `/mnt/ha/` - Home Assistant related project (git repo)
 - `~/Documents/Home/` - Obsidian vault (git-backed)
 
