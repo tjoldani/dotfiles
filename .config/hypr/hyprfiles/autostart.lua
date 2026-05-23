@@ -1,0 +1,8 @@
+hl.on("hyprland.start", function()
+    hl.exec_cmd("waybar & hyprpaper & hypridle & mako")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
+    hl.exec_cmd("[workspace 1 silent] " .. terminal)
+    hl.exec_cmd("[workspace 4 silent] " .. browser)
+    hl.exec_cmd("obsidian")
+    hl.exec_cmd("[workspace special:scratch silent] spotify-launcher")
+end)

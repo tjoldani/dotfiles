@@ -1,0 +1,10 @@
+-- Maintain this order or suffer the consequence
+require("hyprfiles.monitors")
+require("hyprfiles.programs")
+require("hyprfiles.environment")
+require("hyprfiles.autostart")
+require("hyprfiles.looks")
+require("hyprfiles.input")
+require("hyprfiles.keybindings")
+require("hyprfiles.workspaces")
+require("hyprfiles.animations")

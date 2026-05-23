@@ -14,7 +14,11 @@
     "format": "{id}",
     "on-click": "activate",
     "all-outputs": false,
-    "disable-scroll": false
+    "disable-scroll": false,
+    "persistent-workspaces": {
+      "DP-1": [1, 2, 3],
+      "HDMI-A-1": [4, 5, 6]
+    }
   },
 
   "custom/power": {
