@@ -53,6 +53,12 @@ hl.window_rule({
 })
 
 hl.window_rule({
+    name  = "browser-idle-inhibit",
+    match = { class = "^(firefox)$" },
+    idle_inhibit = "fullscreen",
+})
+
+hl.window_rule({
     name  = "suppress-maximize",
     match = { class = ".*" },
     suppress_event = "maximize",
