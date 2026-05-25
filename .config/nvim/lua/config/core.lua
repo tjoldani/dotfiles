@@ -8,7 +8,7 @@ vim.opt.termguicolors = true -- Enable true colors
 vim.opt.background = "dark" -- Set colorschemes to dark
 vim.opt.signcolumn = "yes" -- Show sign column so text doesn't shift
 vim.opt.showmode = false -- Uneeded due to Lualine
-vim.opt.wrap = true -- Enable word wrap
+vim.opt.wrap = false -- Enable word wrap
 vim.opt.linebreak = true -- Wrap at words instead of letters.
 vim.opt.swapfile = false -- Annoying
 vim.opt.cursorline = true -- Highlight current line
@@ -40,8 +40,8 @@ vim.cmd([[
 -- Searching
 vim.opt.ignorecase = true -- Case insensitive search
 vim.opt.smartcase = true -- Case-sensitive if uppercase letters used
-vim.opt.hlsearch = false -- Highlight search results
-vim.opt.incsearch = true -- Highlight matches while tying
+vim.opt.hlsearch = true -- Highlight search results
+vim.opt.incsearch = true -- Highlight matches while typing
 vim.opt.inccommand = "split" -- Split %s into sub window
 
 -- LSP Warnings
