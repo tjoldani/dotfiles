@@ -19,6 +19,7 @@ hl.bind(mainMod .. " + DELETE", hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mainMod .. " + SHIFT + R", hl.dsp.exec_cmd("hyprctl reload"))
 hl.bind(mainMod .. " + ALT + N", hl.dsp.exec_cmd("~/.local/bin/newnote.sh"))
 hl.bind(mainMod .. " + ALT + D", hl.dsp.exec_cmd("~/.local/bin/dailynote.sh"))
+hl.bind(mainMod .. " + ALT + A", hl.dsp.exec_cmd("~/.local/bin/audio-toggle.sh"))
 
 -- Move focus
 hl.bind(mainMod .. " + H", hl.dsp.focus({ direction = "left" }))
